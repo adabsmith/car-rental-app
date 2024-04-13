@@ -27,7 +27,7 @@ const CarList = () => {
             <img src={`/images/cars/${car.image}`} alt={car.name} />
             <h3>{car.name}</h3>
             <p>Price: ${car.price}/day</p>
-            <button>Rent Now</button>
+            <button type='button' >Rent Now</button>
           </div>
         ))}
       </div>
