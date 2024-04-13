@@ -19,6 +19,7 @@ const CarList = () => {
 
   return (
     <div className="car-list">
+      <br></br>
       <h2>Available Cars</h2>
       <div className="car-grid">
         {cars.map(car => (
