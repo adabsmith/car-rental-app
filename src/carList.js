@@ -2,7 +2,7 @@ import React from 'react';
 
 const CarList = () => {
   const cars = [
-    { id: 1, name: 'Toyota Corolla', price: 50, image: 'toyota_corolla.jpg' },
+    { id: 1, name: 'Toyota Corolla', price: 50, image: 'toyota_corolla.avif' },
     { id: 2, name: 'Honda Civic', price: 60, image: 'honda_civic.jpg' },
     { id: 3, name: 'Ford Mustang', price: 80, image: 'ford_mustang.jpg' },
     // Add more cars with their respective images
