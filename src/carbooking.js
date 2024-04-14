@@ -65,7 +65,7 @@ const CarRentForm = () => {
   };
 
   return (
-    <div className="container bg-dark">
+    <div className="container bg-dark rounded">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Pickup Location:</label>
