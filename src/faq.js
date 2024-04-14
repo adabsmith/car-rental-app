@@ -4,6 +4,7 @@ function Accordion() {
   return (
     <div className="container">
       <h1 className="text-center">FAQ</h1>
+      <br></br>
       <div className="accordion-container" style={{ paddingBottom: '50px'}}>
         <div className="accordion" id="accordionFlushExample" style={{ width: '700px', margin: '0 auto' }}>
           <AccordionItem
