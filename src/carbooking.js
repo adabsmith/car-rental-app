@@ -11,15 +11,16 @@ const CarRentForm = () => {
   const [pickupSuggestions, setPickupSuggestions] = useState([]);
   const [dropOffSuggestions, setDropOffSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [focusedInput, setFocusedInput] = useState('');
 
   useEffect(() => {
-    if (formData.pickupLocation) {
+    if (formData.pickupLocation && focusedInput === 'pickupLocation') {
       fetchSuggestions(formData.pickupLocation, setPickupSuggestions);
     }
-    if (formData.dropOffLocation) {
+    if (formData.dropOffLocation && focusedInput === 'dropOffLocation') {
       fetchSuggestions(formData.dropOffLocation, setDropOffSuggestions);
     }
-  }, [formData.pickupLocation, formData.dropOffLocation]);
+  }, [formData.pickupLocation, formData.dropOffLocation, focusedInput]);
 
   const fetchSuggestions = async (query, setSuggestions) => {
     try {
@@ -45,7 +46,7 @@ const CarRentForm = () => {
     setFormData({ ...formData, [name]: value });
     // Fetch suggestions when typing in the pickup or drop-off location fields
     if (name === 'pickupLocation' || name === 'dropOffLocation') {
-      fetchSuggestions(value, name === 'pickupLocation' ? setPickupSuggestions : setDropOffSuggestions);
+      setFocusedInput(name);
     }
   };
 
@@ -68,53 +69,51 @@ const CarRentForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Pickup Location:</label>
-          <div className="position-relative">
-            <input
-              type="text"
-              className="form-control"
-              name="pickupLocation"
-              value={formData.pickupLocation}
-              onChange={handleChange}
-              placeholder="Enter Pickup Location"
-              autoComplete="off"
-              required
-            />
-            {loading && <div className="autocomplete-suggestions">Loading...</div>}
-            {pickupSuggestions.length > 0 && (
-              <ul className="list-group autocomplete">
-                {pickupSuggestions.map((suggestion, index) => (
-                  <li key={index} className="list-group-item" onClick={() => handleAutocomplete('pickupLocation', suggestion)}>
-                    {suggestion}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          <input
+            type="text"
+            className="form-control"
+            name="pickupLocation"
+            value={formData.pickupLocation}
+            onChange={handleChange}
+            onFocus={() => setFocusedInput('pickupLocation')}
+            placeholder="Enter Pickup Location"
+            autoComplete="off"
+            required
+          />
+          {loading && <div className="autocomplete-suggestions">Loading...</div>}
+          {pickupSuggestions.length > 0 && focusedInput === 'pickupLocation' && (
+            <ul className="list-group autocomplete">
+              {pickupSuggestions.map((suggestion, index) => (
+                <li key={index} className="list-group-item" onClick={() => handleAutocomplete('pickupLocation', suggestion)}>
+                  {suggestion}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className="form-group">
           <label>Drop-off Location:</label>
-          <div className="position-relative">
-            <input
-              type="text"
-              className="form-control"
-              name="dropOffLocation"
-              value={formData.dropOffLocation}
-              onChange={handleChange}
-              placeholder="Enter Drop-off Location"
-              autoComplete="off"
-              required
-            />
-            {loading && <div className="autocomplete-suggestions">Loading...</div>}
-            {dropOffSuggestions.length > 0 && (
-              <ul className="list-group autocomplete">
-                {dropOffSuggestions.map((suggestion, index) => (
-                  <li key={index} className="list-group-item" onClick={() => handleAutocomplete('dropOffLocation', suggestion)}>
-                    {suggestion}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          <input
+            type="text"
+            className="form-control"
+            name="dropOffLocation"
+            value={formData.dropOffLocation}
+            onChange={handleChange}
+            onFocus={() => setFocusedInput('dropOffLocation')}
+            placeholder="Enter Drop-off Location"
+            autoComplete="off"
+            required
+          />
+          {loading && <div className="autocomplete-suggestions">Loading...</div>}
+          {dropOffSuggestions.length > 0 && focusedInput === 'dropOffLocation' && (
+            <ul className="list-group autocomplete">
+              {dropOffSuggestions.map((suggestion, index) => (
+                <li key={index} className="list-group-item" onClick={() => handleAutocomplete('dropOffLocation', suggestion)}>
+                  {suggestion}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className="row">
           <div className="col-sm-6">
