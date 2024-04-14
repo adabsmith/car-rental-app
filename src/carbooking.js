@@ -143,7 +143,7 @@ const CarRentForm = () => {
             </div>
           </div>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary" style={{marginTop:'20px', marginBottom:'20px'}}>Submit</button>
       </form>
     </div>
   );
