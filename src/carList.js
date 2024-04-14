@@ -21,6 +21,7 @@ const CarList = () => {
     <div className="car-list">
       <br></br>
       <h2>Available Cars</h2>
+      <br></br>
       <div className="car-grid">
         {cars.map(car => (
           <div className="car-card" key={car.id}>
