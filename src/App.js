@@ -7,6 +7,9 @@ import CarList from './carList';
 import PaginationComponent from './pagination'; 
 import Footer from './footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CarRentForm from './carbooking';
+
+
 
 
 function App() {
@@ -15,9 +18,10 @@ function App() {
       <Header />
       {/* <PrimaryNavbar /> */}
       <CarouselComponent />
+      <CarRentForm/> 
       <CarList />
-      <PaginationComponent />
-      <Footer />
+      <PaginationComponent/>
+      <Footer/>
     </div>
   );
 }

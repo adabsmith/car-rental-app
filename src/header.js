@@ -1,4 +1,6 @@
 import React from 'react';
+import CarBooking from './carbooking';
+import { Link } from 'react-router-dom'
 
 const CustomNavbar = () => {
   return (
@@ -20,7 +22,9 @@ const CustomNavbar = () => {
           </li>
         </ul> 
       </div>
+      <a href ='/carbooking' style={{textDecoration:"none"}}>
       <button className="btn btn-dark my-2 my-sm-0 ml-3 d-flex justify-content-end" style={{ marginRight:'10px'}}>Book Now</button>
+    </a>
     </nav>
   );
 }
