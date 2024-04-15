@@ -9,6 +9,7 @@ import Accordion from './faq'; // Importing the Accordion component
 import Footer from './footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CarRentForm from './carbooking';
+import { Team } from './Team';
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <CarList />
       <PaginationComponent/>
       <Accordion /> {/* Rendering the Accordion component */}
+      <Team/>
       <Footer/>
     </div>
   );
