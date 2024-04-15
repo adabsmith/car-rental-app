@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const CustomNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top " >
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top " >
       <a className="navbar-brand" href="/" style={{ marginLeft:'10px'}}>Rent a Car</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
