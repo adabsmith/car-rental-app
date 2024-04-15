@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import CarNames from './carnames';
+import { cars } from './carnames';
 
 const CarRentForm = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,14 @@ const CarRentForm = () => {
   const [dropOffSuggestions, setDropOffSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [focusedInput, setFocusedInput] = useState('');
+
+  const [selectedCar, setSelectedCar] = useState('');
+
+
+  const handleCarChange = (event) => {
+    setSelectedCar(event.target.value);
+  };
+
 
   useEffect(() => {
     if (formData.pickupLocation && focusedInput === 'pickupLocation') {
@@ -116,7 +126,7 @@ const CarRentForm = () => {
           )}
         </div>
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-sm-4">
             <div className="form-group">
               <label>Pickup Date:</label>
               <input
@@ -129,9 +139,9 @@ const CarRentForm = () => {
               />
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-4">
             <div className="form-group">
-              <label>Return Date:</label>
+              <label>Selected Car:</label>
               <input
                 type="date"
                 className="form-control"
@@ -140,6 +150,20 @@ const CarRentForm = () => {
                 onChange={handleChange}
                 required
               />
+            </div>
+          </div>
+
+          <div className="col-sm-4">
+            <div className="form-group">
+              <label>Return Date:</label>
+              <select value={selectedCar} onChange={handleCarChange}>
+        <option value="">Select a car...</option>
+        {cars.map((car) => (
+          <option key={car.id} value={car.name}>
+            {car.name}
+          </option>
+        ))}
+      </select>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const CarList = () => {
   const cars = [
     { id: 1, name: 'Toyota Corolla', price: 50, image: 'toyota_corolla.avif' },
     { id: 2, name: 'Honda Civic', price: 60, image: 'Honda-CivicSport.webp' },
@@ -17,32 +16,37 @@ const CarList = () => {
     { id: 12, name: 'Nissan Altima', price: 60, image: 'nissan.webp' },
     { id: 13, name: 'Mercedes-Benz E400', price: 60, image: 'mercedes.png' },
     { id: 14, name: 'Ferrari', price: 60, image: 'Ferrari.jpg' },
-    { id: 15, name: 'Lamborghini Aventador', price: 60, image: 'Lambo1.png' }, 
-
+    { id: 15, name: 'Lamborghini Aventador', price: 60, image: 'Lambo1.png' }
   ];
- 
-  
-  return (
 
-    <div className="car-list">
-      <br></br>
-      <h2>Available Cars</h2>
-      <br></br>
-      <div className="car-grid">
-        {cars.map(car => (
-          <div className="car-card" key={car.id}>
-            <img src={`/images/cars/${car.image}`} alt={car.name} />
-            <h3>{car.name}</h3>
-            <p>Price: ${car.price}/day</p>
-            <button type='button' >Rent Now</button>
-          </div>
+  const CarNames = () => {
+    const [selectedCar, setSelectedCar] = useState('');
+  
+    const handleCarChange = (event) => {
+      setSelectedCar(event.target.value);
+    };
+
+
+  return (
+    <div>
+      <h1>Select a Car</h1>
+      <select value={selectedCar} onChange={handleCarChange}>
+        <option value="">Select a car...</option>
+        {cars.map((car) => (
+          <option key={car.id} value={car.name}>
+            {car.name}
+          </option>
         ))}
-        
-      </div>
+      </select>
+      {selectedCar && (
+        <div>
+          <h2>Selected Car: {selectedCar}</h2>
+          {/* You can add more details about the selected car here */}
+        </div>
+      )}
     </div>
   );
+};
 
-  
-}
-
-export default CarList;
+export {cars};
+export default CarNames;
