@@ -141,7 +141,7 @@ const CarRentForm = () => {
           </div>
           <div className="col-sm-4">
             <div className="form-group">
-              <label>Selected Car:</label>
+              <label>Return Date:</label>
               <input
                 type="date"
                 className="form-control"
@@ -154,8 +154,8 @@ const CarRentForm = () => {
           </div>
 
           <div className="col-sm-4">
-            <div className="form-group">
-              <label>Return Date:</label>
+            <div className="form-group" >
+              <label style={{width:'100%'}}>Selected Car:</label>
               <select value={selectedCar} onChange={handleCarChange}>
         <option value="">Select a car...</option>
         {cars.map((car) => (
