@@ -6,7 +6,7 @@ function Accordion() {
       <h1 className="text-center">FAQ</h1>
       <br></br>
       <div className="accordion-container" style={{ paddingBottom: '50px'}}>
-        <div className="accordion" id="accordionFlushExample" style={{ width: '700px', margin: '0 auto' }}>
+        <div className="accordion" id="accordionFlushExample" style={{ maxWidth: '700px', margin: '0 auto' }}>
           <AccordionItem
             id="flush-collapseOne"
             title="Can I rent multiple cars?"
@@ -17,12 +17,14 @@ function Accordion() {
             title="What type of Insurance do you provide?"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam molestie tempus lorem sed dictum. Duis imperdiet risus quis lacus sollicitudin, sed bibendum nibh ultrices."
           />
+          
           <AccordionItem
             id="flush-collapseThree"
             title="How soon can I have the car collected after a booking?"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam molestie tempus lorem sed dictum. Duis imperdiet risus quis lacus sollicitudin, sed bibendum nibh ultrices."
           />
         </div>
+        
       </div>
     </div>
   );
