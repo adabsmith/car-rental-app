@@ -18,6 +18,7 @@ const CarList = () => {
     { id: 13, name: 'Mercedes-Benz E400', price: 60, image: 'mercedes.png' },
     { id: 14, name: 'Ferrari', price: 60, image: 'Ferrari.jpg' },
     { id: 15, name: 'Lamborghini Aventador', price: 60, image: 'Lambo1.png' }, 
+    { id: 16, name: 'Porsche', price: 110, image: 'Lambo1.png' }, 
 
   ];
  
