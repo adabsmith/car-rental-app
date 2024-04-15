@@ -93,3 +93,10 @@ width: 100%;
     align-items: center;
   }
 } */
+.active{
+  .active {
+    color: red; /* Change color as needed */
+    font-weight: bold; /* Example: Make the active link bold */
+  }
+  
+}
