@@ -11,10 +11,10 @@ const CarList = () => {
     { id: 6, name: 'Audi Q7', price: 110, image: 'front-left-side-47.webp' },
     { id: 7, name: 'Chevrolet Camaro', price: 90, image: 'singapore7.webp' },
     { id: 8, name: 'Volkswagen Golf', price: 70, image: '20230602055539_2.jpg' },
-    { id: 9, name: 'Tesla Model 3', price: 150, image: 'tesla-model-31.avif' },
+    { id: 9, name: 'Tesla Model 3', price: 150, image: 'VXctesla.jpg' },
     { id: 10, name: 'Lexus RX', price: 130, image: '2016_Lexus_RX350_36.avif' },
-    { id: 11, name: 'Subaru Outback', price: 80, image: 'subaru_outback.jpg' },
-    { id: 12, name: 'Nissan Altima', price: 60, image: 'nissan_altima.jpg' }
+    { id: 11, name: 'Subaru Outback', price: 80, image: 'outback+sport+xt.jpg' },
+    { id: 12, name: 'Nissan Altima', price: 60, image: 'nissan.webp' }
   ];
 
   return (
