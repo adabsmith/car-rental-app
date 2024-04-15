@@ -2,7 +2,7 @@ import React from 'react';
 
 function PaginationComponent() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '20px', paddingTop: '30px'}}>
       <nav aria-label="...">
         <ul className="pagination">
           <li className="page-item disabled">
