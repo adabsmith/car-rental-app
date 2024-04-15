@@ -23,6 +23,16 @@ function Accordion() {
             title="How soon can I have the car collected after a booking?"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam molestie tempus lorem sed dictum. Duis imperdiet risus quis lacus sollicitudin, sed bibendum nibh ultrices."
           />
+          <AccordionItem
+            id="flush-collapseFour"
+            title="Can I get my car delivered to me?"
+            content="Yes, many hosts offer delivery to travel hubs like airports, train stations, and hotels, or to custom delivery locations. There are cars available on Turo near hundreds of airports, or you can have your car delivered for pickup and return at your hotel or vacation rental to save time and hassle. Some hosts offer free delivery, while others set their own delivery fee."
+          />
+          <AccordionItem
+            id="flush-Five"
+            title="Do I need a Canadian license to drive in Canada?"
+            content="No, you don’t need a Canadian license to book a car in Canada. But you do need a valid driver’s license — most international driver’s licenses are accepted in the US, Canada, and the UK."
+          />
         </div>
         
       </div>
