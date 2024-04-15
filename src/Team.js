@@ -1,5 +1,9 @@
 import Card from "./Card";
-import ceo from "./ceo.jpg";
+import ceo1 from "./ceo1.jpg";
+import Salee from "./Salee.jpg";
+import opr from "./opr.jpg";
+import staff from "./staff.jpg";
+
 
 function Team() {
   return (
@@ -9,23 +13,23 @@ function Team() {
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <Card
             name="Devon Klenjan, OALA, CSLA"
-            job="Sales & Marketing Manager"
-            img="https://source.unsplash.com/1600x900/?headshot+female"
+            job="Branch Manager"
+            img={ceo1}
           />
           <Card
-            img={ceo}       
+            img={staff}     
             name="Matte Crossman"
-            job="Project Coordinator"
+            job="Customer Service Representative"
           />
           <Card
-            img="https://placehold.co/600x400?text=card+image+3"
+            img={Salee}
             name="Nathan Groat, CPA, CA"
             job="Financial Manager"
           />
           <Card
-            img="https://placehold.co/600x400?text=card+image+4"
+            img={opr}
             name="David Baartman"
-            job="Estimator"
+            job="Sales Representative"
           />
         </div>
       </div>
