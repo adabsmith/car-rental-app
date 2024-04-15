@@ -16,7 +16,8 @@ import React, { useState } from 'react';
     { id: 12, name: 'Nissan Altima', price: 60, image: 'nissan.webp' },
     { id: 13, name: 'Mercedes-Benz E400', price: 60, image: 'mercedes.png' },
     { id: 14, name: 'Ferrari', price: 60, image: 'Ferrari.jpg' },
-    { id: 15, name: 'Lamborghini Aventador', price: 60, image: 'Lambo1.png' }
+    { id: 15, name: 'Lamborghini Aventador', price: 60, image: 'Lambo1.png' },
+    { id: 16, name: 'Porsche Turbo', price: 110, image: 'Porsche-911.avif' }
   ];
 
   const CarNames = () => {
