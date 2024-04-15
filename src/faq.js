@@ -1,3 +1,5 @@
+// Component for frequently asked questions (FAQ)
+
 import React from 'react';
 
 function Accordion() {

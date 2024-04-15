@@ -1,3 +1,5 @@
+// Carousel component
+
 import React from 'react';
 import mustangImage from './mustang.jpg';
 import bentleyImage from './bmw.jpg';

@@ -1,3 +1,5 @@
+// Pagination Component 
+
 import React from 'react';
 
 function PaginationComponent() {
