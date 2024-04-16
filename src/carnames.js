@@ -6,7 +6,7 @@ import React, { useState } from 'react';
     { id: 3, name: 'Ford Mustang', price: 80, image: '2024_Ford_Mustang.jpg' },
     // Add more cars with their respective images
     { id: 4, name: 'BMW X5', price: 100, image: 'bmw-x5.jpg' },
-    { id: 5, name: 'Mercedes-Benz E-Class', price: 120, image: 'front-left-side-47.jpg' },
+    { id: 5, name: 'Mercedes-Benz', price: 120, image: 'front-left-side-47.jpg' },
     { id: 6, name: 'Audi Q7', price: 110, image: 'front-left-side-47.webp' },
     { id: 7, name: 'Chevrolet Camaro', price: 90, image: 'singapore7.webp' },
     { id: 8, name: 'Volkswagen Golf', price: 70, image: '20230602055539_2.jpg' },

@@ -11,11 +11,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CarRentForm from './carbooking';
 import { Team } from './Team';
 import CarNames from './carnames';
+import { BrowserRouter, Link } from "react-router-dom";
+import Router from "./Router";
 
 
 
 
 function App() {
+
+
   return (
     <div className="App">
       <Header /> {/* <PrimaryNavbar /> */}
@@ -29,6 +33,7 @@ function App() {
       <Footer/>
     </div>
   );
-}
+};
+
 
 export default App;

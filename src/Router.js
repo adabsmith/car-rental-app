@@ -1,16 +1,17 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import CarList from "./carList";
 import {Team} from "./Team";
 import App from "./App";
+import CarPage from "./carPage";
 
 const Router = () => {
   return (
-    <Routes>
+    <Switch>
       <Route path="/" element={<App />} />
       <Route path="/Team" element={<Team />} />
-      <Route path="/carList" element={<CarList />} />
-    </Routes>
+      <Route path="/carPage" element={<CarPage />} />
+    </Switch>
   );
 };
 
