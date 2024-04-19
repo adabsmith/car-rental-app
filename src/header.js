@@ -22,7 +22,7 @@ const CustomNavbar = () => {
             <a className="nav-link" href="/cars">Cars</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="./Team">Team</a>
+            <a className="nav-link" href="/Team">Team</a>
           </li>
         </ul>
           
