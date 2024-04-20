@@ -72,7 +72,8 @@ const CarRentForm = () => {
       pickupLocation: '',
       dropOffLocation: '',
       pickupDate: '',
-      returnDate: ''
+      returnDate: '',
+      
     });
   };
 

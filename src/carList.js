@@ -9,7 +9,7 @@ const CarList = () => {
     { id: 4, name: 'BMW X5', price: 100, image: 'bmw-x5.jpg' },
     { id: 5, name: 'Mercedes-Benz', price: 120, image: 'front-left-side-47.jpg' },
     { id: 6, name: 'Audi Q7', price: 110, image: 'front-left-side-47.webp' },
-    { id: 7, name: 'Chevrolet Camaro', price: 90, image: 'singapore7.webp' },
+    { id: 7, name: <h5>Chevrolet Camaro</h5>, price: 90, image: 'singapore7.webp' },
     { id: 8, name: 'Volkswagen Golf', price: 70, image: '20230602055539_2.jpg' },
     { id: 9, name: 'Tesla Model 3', price: 150, image: 'VXctesla.jpg' },
     { id: 10, name: 'Lexus RX', price: 130, image: '2016_Lexus_RX350_36.avif' },
